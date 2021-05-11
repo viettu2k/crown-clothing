@@ -1,14 +1,13 @@
 .sign-in {
-  width: 380px;
-  display: flex;
-  flex-direction: column;
-
-  .title {
-    margin: 10px 0;
-  }
-
-  .buttons {
+    font-family: "Operator Mono Lig";
+    width: 380px;
     display: flex;
-    justify-content: space-between;
-  }
+    flex-direction: column;
+    .title {
+        margin: 10px 0;
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
 }
