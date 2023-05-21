@@ -1,19 +1,17 @@
-import React, { useState } from "react";
-import { connect } from "react-redux";
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 
-import FormInput from "../form-input/form-input.component";
-import CustomButton from "../custom-button/custom-button.component";
-
-import { signUpStart } from "../../redux/user/user.actions";
-
-import { SignUpContainer, SignUpTitle } from "./sign-up.styles";
+import FormInput from '../form-input/form-input.component';
+import CustomButton from '../custom-button/custom-button.component';
+import { signUpStart } from '../../redux/user/user.actions';
+import { SignUpContainer, SignUpTitle } from './sign-up.styles';
 
 const SignUp = ({ signUpStart }) => {
   const [userCredentials, setCredentials] = useState({
-    displayName: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
+    displayName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
   });
 
   const { displayName, email, password, confirmPassword } = userCredentials;
@@ -37,43 +35,43 @@ const SignUp = ({ signUpStart }) => {
 
   return (
     <SignUpContainer>
-      <SignUpTitle> I do not have a account </SignUpTitle>{" "}
-      <span> Sign up with your email and password </span>{" "}
-      <form className="sign-up-form" onSubmit={handleSubmit}>
+      <SignUpTitle> I do not have a account </SignUpTitle>{' '}
+      <span> Sign up with your email and password </span>{' '}
+      <form className='sign-up-form' onSubmit={handleSubmit}>
         <FormInput
-          type="text"
-          name="displayName"
+          type='text'
+          name='displayName'
           value={displayName}
           onChange={handleChange}
-          label="Display Name"
+          label='Display Name'
           required
         />
         <FormInput
-          type="email"
-          name="email"
+          type='email'
+          name='email'
           value={email}
           onChange={handleChange}
-          label="Email"
+          label='Email'
           required
         />
         <FormInput
-          type="password"
-          name="password"
+          type='password'
+          name='password'
           value={password}
           onChange={handleChange}
-          label="Password"
+          label='Password'
           required
         />
         <FormInput
-          type="password"
-          name="confirmPassword"
+          type='password'
+          name='confirmPassword'
           value={confirmPassword}
           onChange={handleChange}
-          label="Confirm Password"
+          label='Confirm Password'
           required
         />
-        <CustomButton type="submit"> SIGN UP </CustomButton>{" "}
-      </form>{" "}
+        <CustomButton type='submit'> SIGN UP </CustomButton>{' '}
+      </form>{' '}
     </SignUpContainer>
   );
 };
